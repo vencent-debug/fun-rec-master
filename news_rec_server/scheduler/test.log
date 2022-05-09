@@ -1,0 +1,2 @@
+/usr/bin:/bin
+run recprocess/offline.py fail.

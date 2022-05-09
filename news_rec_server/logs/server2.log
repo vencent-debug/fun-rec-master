@@ -1,0 +1,18 @@
+Traceback (most recent call last):
+  File "server2.py", line 253, in <module>
+    server.serve_forever()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/baseserver.py", line 398, in serve_forever
+    self.start()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/baseserver.py", line 336, in start
+    self.init_socket()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/pywsgi.py", line 1545, in init_socket
+    StreamServer.init_socket(self)
+  File "/usr/local/lib/python3.8/dist-packages/gevent/server.py", line 180, in init_socket
+    self.socket = self.get_listener(self.address, self.backlog, self.family)
+  File "/usr/local/lib/python3.8/dist-packages/gevent/server.py", line 192, in get_listener
+    return _tcp_listener(address, backlog=backlog, reuse_addr=cls.reuse_addr, family=family)
+  File "/usr/local/lib/python3.8/dist-packages/gevent/server.py", line 288, in _tcp_listener
+    sock.bind(address)
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 563, in bind
+    return self._sock.bind(address)
+OSError: [Errno 98] Address already in use: ('0.0.0.0', 3000)
